@@ -1,0 +1,18 @@
+buckets=6
+specs=12
+=====================================
+:::OBJECT
+this.theArray != null
+this.topOfStack <= daikon.Quant.size(this.theArray)-1
+=====================================
+:::POSTCONDITION
+daikon.Quant.memberOf(\old(daikon.Quant.getElement_Object(this.theArray, \new(this.topOfStack))) , this.theArray )
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - 0 ) holds for: <this.topOfStack, orig(this.topOfStack)>
+\old(x_object) == daikon.Quant.getElement_Object(this.theArray, this.topOfStack)
+daikon.Quant.memberOf(\old(x_object) , this.theArray )
+this.topOfStack == 0 || this.topOfStack == 1 || this.topOfStack == 2
+\old(this.topOfStack) < daikon.Quant.size(this.theArray)-1
+this.topOfStack < daikon.Quant.size(this.theArray)-1
+this.topOfStack < daikon.Quant.size(this.theArray)
+FuzzedInvariant ( Integer_Variable_0 <= #(StackAr.theArray) ) holds for: <orig(this), this.topOfStack>
+FuzzedInvariant ( Integer_Variable_0 < #(StackAr.theArray) ) holds for: <orig(this), this.topOfStack>

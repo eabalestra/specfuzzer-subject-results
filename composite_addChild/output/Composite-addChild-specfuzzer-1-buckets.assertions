@@ -1,0 +1,20 @@
+buckets=8
+specs=14
+=====================================
+:::OBJECT
+daikon.Quant.size(this.max_child.children) == 0
+this.children != null
+daikon.Quant.size(this.parent.max_child.children) == 0 || daikon.Quant.size(this.parent.max_child.children) == 1 || daikon.Quant.size(this.parent.max_child.children) == 2
+("oneOf.java.jpp: SEQUENCE unimplemented" != null)
+=====================================
+:::POSTCONDITION
+daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.max_child.children), \old(daikon.Quant.typeArray(this.max_child.children)))
+FuzzedInvariant ( (Integer_Variable_0 != 1) iff (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(this.parent.value) , this.max_child.parent.init_value , c.value>
+this.parent == this.max_child
+daikon.Quant.size(this.parent.max_child.children)-1 <= \old(daikon.Quant.size(this.parent.max_child.children))
+FuzzedInvariant ( (Integer_Variable_0 < 0) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(this.parent.value) , this.max_child.parent.init_value , c.value>
+this.max_child.parent.init_value != c.value
+FuzzedInvariant ( (Integer_Variable_0 != 0) xor (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <c.value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+daikon.Quant.isReverse(this.max_child.children, \old(this.max_child.children))
+daikon.Quant.pairwiseEqual(this.max_child.children, \old(this.max_child.children))
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 + Integer_Variable_2 ) holds for: <this.parent.parent.value , c.value , orig(this.parent.value)>

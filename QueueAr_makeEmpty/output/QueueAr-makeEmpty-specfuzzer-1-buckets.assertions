@@ -1,0 +1,56 @@
+buckets=45
+specs=50
+=====================================
+:::OBJECT
+FuzzedInvariant ( Integer_Variable_0 != -1 ) holds for: this.front
+this.back <= daikon.Quant.size(this.theArray)-1
+this.currentSize <= daikon.Quant.size(this.theArray)
+this.front == 0 || this.front == 1 || this.front == 2
+this.front == 0
+this.front <= daikon.Quant.size(this.theArray)
+=====================================
+:::POSTCONDITION
+FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <this.currentSize , orig(this.currentSize) , orig(this.back)>
+FuzzedInvariant ( (Integer_Variable_0 < 1) or (Integer_Variable_1 < Integer_Variable_2) ) holds for: <this.currentSize , this.back , orig(this.back)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 + Integer_Variable_2 ) holds for: <this.currentSize , orig(this.front) , orig(this.currentSize)>
+FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) xor (Integer_Variable_1 >= 0) ) holds for: <orig(this.front), this.back>
+FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 > Integer_Variable_2) ) holds for: <this.currentSize , orig(this.front) , orig(this.back)>
+\old(this.front) <= daikon.Quant.size(this.theArray)
+FuzzedInvariant ( (Integer_Variable_0 != 1) xor (Integer_Variable_1 < Integer_Variable_2) ) holds for: <this.currentSize , this.back , orig(this.back)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.currentSize , this.back , orig(this.back)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - 1 ) holds for: <orig(this.front), this.back>
+FuzzedInvariant ( Integer_Variable_0 != #(QueueAr.theArray) ) holds for: <orig(this), this.back>
+FuzzedInvariant ( (Integer_Variable_0 > 1) implies (Integer_Variable_1 < Integer_Variable_2) ) holds for: <this.currentSize , this.back , orig(this.currentSize)>
+\old(this.currentSize) <= daikon.Quant.size(this.theArray)
+FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.currentSize , orig(this.front) , this.back>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.currentSize , orig(this.front) , this.back>
+FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 > Integer_Variable_2) ) holds for: <this.currentSize , orig(this.currentSize) , orig(this.back)>
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 + -1 ) holds for: <this.back, orig(this.currentSize)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 - -1 ) holds for: <this.currentSize, orig(this.currentSize)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 + 1 ) holds for: <orig(this.front), this.back>
+FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <this.back , orig(this.currentSize) , orig(this.back)>
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 + -1 ) holds for: <this.back, orig(this.back)>
+FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <this.currentSize , orig(this.front) , orig(this.currentSize)>
+daikon.Quant.eltsEqual(daikon.Quant.typeArray(this.theArray), null)
+FuzzedInvariant ( (Integer_Variable_0 = -1) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <this.currentSize , this.back , orig(this.back)>
+this.back == daikon.Quant.size(this.theArray)-1
+FuzzedInvariant ( (Integer_Variable_0 != 1) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(this.front) , this.back , orig(this.back)>
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.currentSize , this.back , orig(this.back)>
+FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 > Integer_Variable_2) ) holds for: <this.back , orig(this.currentSize) , orig(this.back)>
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <this.currentSize , this.back , orig(this.back)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - 1 ) holds for: <this.currentSize, this.back>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 + 1 ) holds for: <this.currentSize, this.back>
+FuzzedInvariant ( (Integer_Variable_0 <= 0) or (Integer_Variable_1 > -1) ) holds for: <this.currentSize, this.back>
+FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) or (Integer_Variable_1 = Integer_Variable_2) ) holds for: <this.currentSize , this.back , orig(this.back)>
+FuzzedInvariant ( (Integer_Variable_0 = 1) xor (Integer_Variable_1 > -1) ) holds for: <this.currentSize, orig(this.front)>
+FuzzedInvariant ( (Integer_Variable_0 = 0) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(this.front) , this.back , orig(this.back)>
+FuzzedInvariant ( (Integer_Variable_0 >= 0) iff (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(this.front) , this.back , orig(this.back)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 - Integer_Variable_2 ) holds for: <orig(this.front) , this.back , orig(this.back)>
+FuzzedInvariant ( Integer_Variable_0 = Integer_Variable_1 * 0 ) holds for: <this.currentSize, this.back>
+this.currentSize == this.front
+this.back == \old(daikon.Quant.size(this.theArray))-1
+FuzzedInvariant ( (Integer_Variable_0 > 1) implies (Integer_Variable_1 < Integer_Variable_2) ) holds for: <this.currentSize , this.back , orig(this.back)>
+FuzzedInvariant ( (Integer_Variable_0 >= 1) implies (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(this.front) , this.back , orig(this.currentSize)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - 1 ) holds for: <this.back, orig(this.back)>
+FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <this.back , orig(this.currentSize) , orig(this.back)>
+FuzzedInvariant ( (Integer_Variable_0 > 0) xor (Integer_Variable_1 != 1) ) holds for: <this.currentSize, this.back>

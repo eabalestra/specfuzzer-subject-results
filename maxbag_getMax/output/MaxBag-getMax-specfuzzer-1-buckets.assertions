@@ -1,0 +1,23 @@
+buckets=18
+specs=17
+=====================================
+:::OBJECT
+this._var4384._0 == this._var5992
+=====================================
+:::POSTCONDITION
+FuzzedInvariant ( (MaxBag._var1457.value) xor (Integer_Variable_0 < #(MaxBag._var4384._1)) ) holds for: <orig(this), return>
+FuzzedInvariant ( no n : MaxBag._var66253 : n > Integer_Variable_0 ) holds for: <orig(this), return>
+FuzzedInvariant ( (MaxBag._var1457.value) xor (Integer_Variable_0 < -1) ) holds for: <orig(this), this._var5992>
+FuzzedInvariant ( (MaxBag._var1457.value) xor (Integer_Variable_0 >= #(MaxBag._var721.values)) ) holds for: <orig(this), return>
+FuzzedInvariant ( (MaxBag._var1457.value) or (Integer_Variable_0 <= #(MaxBag._var721.values)) ) holds for: <orig(this), return>
+this._var721 != null
+FuzzedInvariant ( (MaxBag._var1457.value) or (Integer_Variable_0 = #(MaxBag._var721.keySet)) ) holds for: <orig(this), this._var5992>
+FuzzedInvariant ( (MaxBag._var1457.value) implies (Integer_Variable_0 > -1) ) holds for: <orig(this), this._var5992>
+\result != null
+this._var1457 != null
+this._var5992 != null
+this._var4384 != null
+\result == \old(this._var587)
+this._var66253 != null
+FuzzedInvariant ( (MaxBag._var1457.value) or (Integer_Variable_0 = #(MaxBag._var4384._1)) ) holds for: <orig(this), this._var5992>
+FuzzedInvariant ( no n : MaxBag._var721.keySet : n > Integer_Variable_0 ) holds for: <orig(this), return>
