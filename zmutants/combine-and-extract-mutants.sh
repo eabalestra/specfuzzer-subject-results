@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Combining and extracting mutants csv files..."
+
 cat zmutants/invs_part_* > invs-by-mutants-csv-files.tar.gz
 tar -xzf invs-by-mutants-csv-files.tar.gz
 
