@@ -1,0 +1,28 @@
+buckets=18
+specs=22
+=====================================
+:::OBJECT
+this.topOfStack <= daikon.Quant.size(this.theArray)-1
+this.theArray != null
+=====================================
+:::POSTCONDITION
+daikon.Quant.size(this.theArray) == 4 || daikon.Quant.size(this.theArray) == 35 || daikon.Quant.size(this.theArray) == 97
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 + 1 ) holds for: <this.topOfStack, orig(this.topOfStack)>
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 > 1) ) holds for: <this.topOfStack, orig(this.topOfStack)>
+FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) xor (Integer_Variable_1 > -1) ) holds for: <this.topOfStack, orig(this.topOfStack)>
+\old(daikon.Quant.getElement_Object(this.theArray, this.topOfStack)) != null
+daikon.Quant.eltsEqual(daikon.Quant.typeArray(this.theArray), null)
+\old(this.topOfStack) < daikon.Quant.size(this.theArray)-1
+FuzzedInvariant ( Integer_Variable_0 != 0 ) holds for: this.topOfStack
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 < 1) ) holds for: <this.topOfStack, orig(this.topOfStack)>
+this.topOfStack < daikon.Quant.size(this.theArray)
+FuzzedInvariant ( Integer_Variable_0 = -1 ) holds for: this.topOfStack
+FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) xor (Integer_Variable_1 > 1) ) holds for: <this.topOfStack, orig(this.topOfStack)>
+FuzzedInvariant ( Integer_Variable_0 <= 1 ) holds for: this.topOfStack
+this.topOfStack < daikon.Quant.size(this.theArray)-1
+FuzzedInvariant ( Integer_Variable_0 <= #(StackAr.theArray) ) holds for: <orig(this), this.topOfStack>
+FuzzedInvariant ( no n : StackAr.theArray : n != null ) holds for: orig(this)
+FuzzedInvariant ( Integer_Variable_0 <= 0 ) holds for: this.topOfStack
+FuzzedInvariant ( Integer_Variable_0 < #(StackAr.theArray) ) holds for: <orig(this), this.topOfStack>
+FuzzedInvariant ( (Integer_Variable_0 <= -1) iff (Integer_Variable_1 != 1) ) holds for: <this.topOfStack, orig(this.topOfStack)>
+\result != null
