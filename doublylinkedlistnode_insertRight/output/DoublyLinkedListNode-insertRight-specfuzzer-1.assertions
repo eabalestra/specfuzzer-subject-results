@@ -1,28 +1,29 @@
 ===========================================================================
 examples.DoublyLinkedListNode:::OBJECT
 FuzzedInvariant ( all n : DoublyLinkedListNode.*(left + right) : (n.left.*(left + right)) & (n.left.*(left + right)) not in empty ) holds for: this
-FuzzedInvariant ( all n : DoublyLinkedListNode.*(left + right) : (n.left.*(left + right)) & (n.right.*(left + right)) not in empty ) holds for: this
 FuzzedInvariant ( all n : DoublyLinkedListNode.*(left + right) : (n.right.*(left + right)) & (n.left.*(left + right)) not in empty ) holds for: this
+FuzzedInvariant ( all n : DoublyLinkedListNode.*(left + right) : n != null ) holds for: this
 FuzzedInvariant ( all n : DoublyLinkedListNode.^(left + right) : (n.left.*(left + right)) & (n.left.*(left + right)) not in empty ) holds for: this
-FuzzedInvariant ( all n : DoublyLinkedListNode.^(left + right) : (n.left.*(left + right)) & (n.right.*(left + right)) not in empty ) holds for: this
+FuzzedInvariant ( all n : DoublyLinkedListNode.^(left + right) : (n.right.*(left + right)) & (n.left.*(left + right)) not in empty ) holds for: this
 FuzzedInvariant ( all n : DoublyLinkedListNode.^(left + right) : (n.right.*(left + right)) & (n.right.*(left + right)) not in empty ) holds for: this
 FuzzedInvariant ( all n : DoublyLinkedListNode.^(left + right) : n != null ) holds for: this
 FuzzedInvariant ( all n : DoublyLinkedListNode.^(left + right) : n in n.^(left + right) ) holds for: this
 FuzzedInvariant ( no n : DoublyLinkedListNode.*(left + right) : (n.left.*(left + right)) & (n.left.*(left + right)) in empty ) holds for: this
 FuzzedInvariant ( no n : DoublyLinkedListNode.*(left + right) : (n.left.*(left + right)) & (n.right.*(left + right)) in empty ) holds for: this
 FuzzedInvariant ( no n : DoublyLinkedListNode.*(left + right) : (n.right.*(left + right)) & (n.left.*(left + right)) in empty ) holds for: this
+FuzzedInvariant ( no n : DoublyLinkedListNode.*(left + right) : (n.right.*(left + right)) & (n.right.*(left + right)) in empty ) holds for: this
 FuzzedInvariant ( no n : DoublyLinkedListNode.*(left + right) : n = null ) holds for: this
 FuzzedInvariant ( no n : DoublyLinkedListNode.^(left + right) : (n.left.*(left + right)) & (n.left.*(left + right)) in empty ) holds for: this
-FuzzedInvariant ( no n : DoublyLinkedListNode.^(left + right) : (n.left.*(left + right)) & (n.right.*(left + right)) in empty ) holds for: this
+FuzzedInvariant ( no n : DoublyLinkedListNode.^(left + right) : (n.right.*(left + right)) & (n.left.*(left + right)) in empty ) holds for: this
+FuzzedInvariant ( no n : DoublyLinkedListNode.^(left + right) : (n.right.*(left + right)) & (n.right.*(left + right)) in empty ) holds for: this
 FuzzedInvariant ( no n : DoublyLinkedListNode.^(left + right) : n = null ) holds for: this
 FuzzedInvariant ( no n : DoublyLinkedListNode.^(left + right) : n not in n.^(left + right) ) holds for: this
 FuzzedInvariant ( some n : DoublyLinkedListNode.*(left + right) : (n.right.*(left + right)) & (n.left.*(left + right)) not in empty ) holds for: this
-FuzzedInvariant ( some n : DoublyLinkedListNode.*(left + right) : (n.right.*(left + right)) & (n.right.*(left + right)) not in empty ) holds for: this
 FuzzedInvariant ( some n : DoublyLinkedListNode.*(left + right) : n != null ) holds for: this
 FuzzedInvariant ( some n : DoublyLinkedListNode.*(left + right) : n in n.^(left + right) ) holds for: this
-FuzzedInvariant ( some n : DoublyLinkedListNode.^(left + right) : (n.left.*(left + right)) & (n.left.*(left + right)) not in empty ) holds for: this
 FuzzedInvariant ( some n : DoublyLinkedListNode.^(left + right) : (n.left.*(left + right)) & (n.right.*(left + right)) not in empty ) holds for: this
-FuzzedInvariant ( some n : DoublyLinkedListNode.^(left + right) : (n.right.*(left + right)) & (n.right.*(left + right)) not in empty ) holds for: this
+FuzzedInvariant ( some n : DoublyLinkedListNode.^(left + right) : (n.right.*(left + right)) & (n.left.*(left + right)) not in empty ) holds for: this
+FuzzedInvariant ( some n : DoublyLinkedListNode.^(left + right) : n != null ) holds for: this
 FuzzedInvariant ( some n : DoublyLinkedListNode.^(left + right) : n in n.^(left + right) ) holds for: this
 this.left != null
 this.left.left != null
@@ -55,7 +56,7 @@ n == n.right
 n == n.right.left
 n == n.right.right
 FuzzedInvariant ( all n : DoublyLinkedListNode.*(left + right) : n in n.^(left + right) ) holds for: this
-FuzzedInvariant ( no n : DoublyLinkedListNode.*(left + right) : n != n.right.left ) holds for: this
+FuzzedInvariant ( all n : DoublyLinkedListNode.^(left + right) : n = n.left.right ) holds for: this
 FuzzedInvariant ( no n : DoublyLinkedListNode.*(left + right) : n not in n.^(left + right) ) holds for: this
 n != null
 ===========================================================================
@@ -91,13 +92,9 @@ n.left != null
 n.right != null
 n.right.right != null
 FuzzedInvariant ( all n : DoublyLinkedListNode.*(left + right) : n != n.left ) holds for: orig(this)
-FuzzedInvariant ( all n : DoublyLinkedListNode.*(left + right) : n != n.right ) holds for: orig(this)
 FuzzedInvariant ( all n : DoublyLinkedListNode.^(left + right) : n != n.left ) holds for: orig(this)
-FuzzedInvariant ( all n : DoublyLinkedListNode.^(left + right) : n != n.right ) holds for: orig(this)
-FuzzedInvariant ( no n : DoublyLinkedListNode.*(left + right) : n = n.left ) holds for: orig(this)
 FuzzedInvariant ( no n : DoublyLinkedListNode.*(left + right) : n = n.right ) holds for: orig(this)
 FuzzedInvariant ( no n : DoublyLinkedListNode.^(left + right) : n = n.left ) holds for: orig(this)
-FuzzedInvariant ( no n : DoublyLinkedListNode.^(left + right) : n = n.right ) holds for: orig(this)
+FuzzedInvariant ( some n : DoublyLinkedListNode.*(left + right) : n != n.left ) holds for: orig(this)
 FuzzedInvariant ( some n : DoublyLinkedListNode.*(left + right) : n != n.right ) holds for: orig(this)
-FuzzedInvariant ( some n : DoublyLinkedListNode.^(left + right) : n != n.left ) holds for: orig(this)
 FuzzedInvariant ( some n : DoublyLinkedListNode.^(left + right) : n != n.right ) holds for: orig(this)
