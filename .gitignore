@@ -1,3 +1,8 @@
 tools/
 
-._*.sh
+*.csv
+
+*.xml
+
+*.log
+!output.log
