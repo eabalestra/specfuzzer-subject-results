@@ -33,14 +33,18 @@ for dir in mutants/*/; do # list directories in the form "/tmp/dirname/"
 	javac -cp $build_dir:$subject_sources/libs/* -g $dir$target_file -d $build_dir
 	echo '> Mutant compiled'
 	echo ''
+
 	echo '> Generating traces with Chicory from mutant'
+	echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting Chicory for mutant"
 	dir2=${dir%*/}
 	number=${dir2##*/}
-	timeout "$TIMEOUT" java -cp lib/daikon.jar:$cp_with_tests daikon.Chicory --output-dir=$mutants_dir --comparability-file=$setup_output_dir/$driver_base'Driver.decls-DynComp' --ppt-omit-pattern=$driver_base'.*' --ppt-omit-pattern='org.junit.*' --dtrace-file=$driver_base'Driver-m'$number'.dtrace.gz' testers.$driver_base'Driver' $mutants_dir/$driver_base'Driver-m'$number'-objects.xml'
-
+	timeout --kill-after=10 "$TIMEOUT" java -cp lib/daikon.jar:$cp_with_tests daikon.Chicory --output-dir=$mutants_dir --comparability-file=$setup_output_dir/$driver_base'Driver.decls-DynComp' --ppt-omit-pattern=$driver_base'.*' --ppt-omit-pattern='org.junit.*' --dtrace-file=$driver_base'Driver-m'$number'.dtrace.gz' testers.$driver_base'Driver' $mutants_dir/$driver_base'Driver-m'$number'-objects.xml'
 	exit_code=$?
+	echo "[$(date '+%Y-%m-%d %H:%M:%S')] Chicory finished with exit code: $exit_code"
 	if [ $exit_code -eq 124 ]; then
-		echo "WARNING: Timeout for mutant $number after $TIMEOUT seconds"
+		echo "WARNING: Timeout for mutant $number after $TIMEOUT seconds (SIGTERM)"
+	elif [ $exit_code -eq 137 ]; then
+		echo "WARNING: Mutant $number killed with SIGKILL after not responding to timeout"
 	elif [ $exit_code -ne 0 ]; then
 		echo "ERROR: Chicory failed for mutant $number with exit code $exit_code" >&2
 	fi
