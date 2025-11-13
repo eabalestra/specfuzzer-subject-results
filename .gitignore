@@ -6,3 +6,7 @@ tools/
 
 *.log
 !output.log
+
+._*
+
+**/setup-files/**
