@@ -25,7 +25,61 @@ echo ''
 
 cp_with_tests="$build_dir:$subject_sources/build/classes/java/test:$subject_sources/libs/*"
 
-TIMEOUT=1800
+TIMEOUT="${TIMEOUT:-1800}"
+KILL_AFTER="${KILL_AFTER:-10}"
+TIMEOUT_IMPL="${TIMEOUT_IMPL:-auto}"
+
+run_with_timeout() {
+	local duration="$1"
+	local kill_after="$2"
+	shift 2
+
+	if [ -z "$duration" ] || [ "$duration" = "0" ]; then
+		"$@"
+		return $?
+	fi
+
+	local impl="$TIMEOUT_IMPL"
+	if [ "$impl" = "auto" ]; then
+		if command -v timeout >/dev/null 2>&1; then
+			impl="timeout"
+		else
+			impl="python"
+		fi
+	fi
+
+	if [ "$impl" = "timeout" ]; then
+		timeout --foreground --kill-after="$kill_after" "$duration" "$@"
+		return $?
+	fi
+
+	python3 - "$duration" "$kill_after" "$@" <<'PY'
+import subprocess
+import sys
+
+duration = float(sys.argv[1])
+kill_after = float(sys.argv[2])
+cmd = sys.argv[3:]
+
+if duration <= 0:
+    raise SystemExit(subprocess.call(cmd))
+
+with subprocess.Popen(cmd) as proc:
+    try:
+        proc.wait(timeout=duration)
+        raise SystemExit(proc.returncode)
+    except subprocess.TimeoutExpired:
+        proc.terminate()
+        try:
+            proc.wait(timeout=kill_after)
+            raise SystemExit(124)
+        except subprocess.TimeoutExpired:
+            proc.kill()
+            proc.wait()
+            raise SystemExit(137)
+PY
+}
+
 echo '> Processing mutants'
 for dir in mutants/*/; do # list directories in the form "/tmp/dirname/"
 	echo '> Processing mutant: '$dir$target_file
@@ -38,7 +92,7 @@ for dir in mutants/*/; do # list directories in the form "/tmp/dirname/"
 	echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting Chicory for mutant"
 	dir2=${dir%*/}
 	number=${dir2##*/}
-	timeout --kill-after=10 "$TIMEOUT" java -cp lib/daikon.jar:$cp_with_tests daikon.Chicory --output-dir=$mutants_dir --comparability-file=$setup_output_dir/$driver_base'Driver.decls-DynComp' --ppt-omit-pattern=$driver_base'.*' --ppt-omit-pattern='org.junit.*' --dtrace-file=$driver_base'Driver-m'$number'.dtrace.gz' testers.$driver_base'Driver' $mutants_dir/$driver_base'Driver-m'$number'-objects.xml'
+	run_with_timeout "$TIMEOUT" "$KILL_AFTER" java -cp lib/daikon.jar:$cp_with_tests daikon.Chicory --output-dir=$mutants_dir --comparability-file=$setup_output_dir/$driver_base'Driver.decls-DynComp' --ppt-omit-pattern=$driver_base'.*' --ppt-omit-pattern='org.junit.*' --dtrace-file=$driver_base'Driver-m'$number'.dtrace.gz' testers.$driver_base'Driver' $mutants_dir/$driver_base'Driver-m'$number'-objects.xml'
 	exit_code=$?
 	echo "[$(date '+%Y-%m-%d %H:%M:%S')] Chicory finished with exit code: $exit_code"
 	if [ $exit_code -eq 124 ]; then
