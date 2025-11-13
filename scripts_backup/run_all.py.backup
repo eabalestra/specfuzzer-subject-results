@@ -1,0 +1,28 @@
+import sys
+import subprocess
+
+# Define the input file from the argument
+SUBJECTS_FILE = sys.argv[1]
+OUTPUT_LOG = "experiments/output.log"
+
+# Read the file line by line
+with open(SUBJECTS_FILE, "r") as file:
+    for line in file:
+        if line[0] == "#":
+            continue
+        e1, e2, e3 = line.strip().split()
+        with open(OUTPUT_LOG, "a") as log:
+            print(f"Running setup for: {e1} {e2} {e3}", file=log)
+            subprocess.run(
+                f"./experiments/setup.sh {e1} {e2} {e3}",
+                stdout=log,
+                stderr=log,
+                shell=True,
+            )
+            print(f"Running specfuzzer for: {e1} {e2} {e3}", file=log)
+            subprocess.run(
+                f"./experiments/run-specfuzzer.sh {e1} {e2} {e3}",
+                stdout=log,
+                stderr=log,
+                shell=True,
+            )
