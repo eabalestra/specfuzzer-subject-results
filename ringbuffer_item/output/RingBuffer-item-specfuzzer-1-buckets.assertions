@@ -1,0 +1,26 @@
+buckets=20
+specs=20
+=====================================
+:::OBJECT
+this.start == 1
+FuzzedInvariant ( Integer_Variable_0 > -1 ) holds for: this.free
+FuzzedInvariant ( Integer_Variable_0 >= 0 ) holds for: this.start
+FuzzedInvariant ( Integer_Variable_0 > 0 ) holds for: this.capacity_
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + -1 ) holds for: <this.free, this.capacity_>
+FuzzedInvariant ( Integer_Variable_0 >= 1 ) holds for: this.free
+FuzzedInvariant ( some n : RingBuffer.data : n = null ) holds for: this
+=====================================
+:::POSTCONDITION
+FuzzedInvariant ( (Integer_Variable_0 >= 1) xor (Integer_Variable_1 > Integer_Variable_2) ) holds for: <this.start , this.free , this.capacity_>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 * -1 ) holds for: <this.start, this.capacity_>
+FuzzedInvariant ( (Integer_Variable_0 > -1) xor (Integer_Variable_1 <= 1) ) holds for: <this.free, this.capacity_>
+FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 * -1 ) holds for: <this.start, this.free>
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.start , this.free , this.capacity_>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + -1 ) holds for: <this.start, this.capacity_>
+FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 - Integer_Variable_2 ) holds for: <this.start , this.free , this.capacity_>
+FuzzedInvariant ( Integer_Variable_0 = #(RingBuffer.data) ) holds for: <orig(this), this.free>
+FuzzedInvariant ( (Integer_Variable_0 != 0) xor (Integer_Variable_1 < 1) ) holds for: <this.start, this.free>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - Integer_Variable_2 ) holds for: <this.start , this.free , this.capacity_>
+FuzzedInvariant ( (Integer_Variable_0 > -1) xor (Integer_Variable_1 <= 1) ) holds for: <this.start, this.capacity_>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.start , this.free , this.capacity_>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + Integer_Variable_2 ) holds for: <this.start , this.free , this.capacity_>

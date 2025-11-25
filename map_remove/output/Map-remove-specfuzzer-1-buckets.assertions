@@ -1,0 +1,10 @@
+buckets=4
+specs=4
+=====================================
+:::OBJECT
+this.keys != null
+this.data != null
+=====================================
+:::POSTCONDITION
+daikon.Quant.size(this.keys) == \old(daikon.Quant.size(this.keys))-1
+daikon.Quant.size(this.data) == \old(daikon.Quant.size(this.data))-1
