@@ -4,4 +4,4 @@ specs=1
 :::OBJECT
 =====================================
 :::POSTCONDITION
-FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - Double_Variable_2 ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>

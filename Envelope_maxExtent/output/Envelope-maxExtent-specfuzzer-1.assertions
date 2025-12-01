@@ -1,102 +1,80 @@
 ===========================================================================
 jts.Envelope:::OBJECT
-FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= 1.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 >= 0.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 != -1.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 < -1.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 = 0.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 > 1.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= -1.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= 1.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 > -1.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != -1.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 >= 1.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 > -1.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + 1.0 ) holds for: <this.minx, this.maxx>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - -1.0 ) holds for: <this.minx, this.maxx>
 FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 + 1.0 ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 - -1.0 ) holds for: <this.minx, this.maxx>
 FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 * 1.0 ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 + 0.0 ) holds for: <this.minx, this.maxx>
 FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 + 1.0 ) holds for: <this.minx, this.maxx>
 FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 - -1.0 ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 - 0.0 ) holds for: <this.minx, this.maxx>
 FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 / 1.0 ) holds for: <this.minx, this.maxx>
 daikon.Quant.fuzzy.lte(this.minx, this.maxx)
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 1.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 >= -1.0) ) holds for: <this.maxx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.maxx, this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + -1.0 ) holds for: <this.maxx, this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - 1.0 ) holds for: <this.maxx, this.miny>
 daikon.Quant.fuzzy.lte(this.miny, this.maxy)
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 = Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 ===========================================================================
 jts.Envelope.maxExtent():::ENTER
 FuzzedInvariant ( Double_Variable_0 != 1.0 ) holds for: this.minx
-FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = 0.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.minx, this.maxx>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 > -1.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 = -1.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < 0.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > -1.0) ) holds for: <this.minx, this.maxx>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != 0.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = 0.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 <= 1.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= 1.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < 0.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 >= 0.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.minx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < 1.0) ) holds for: <this.minx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.minx, this.miny>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = 0.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 != -1.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.minx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.minx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.miny>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.minx, this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * -1.0 ) holds for: <this.minx, this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + -1.0 ) holds for: <this.minx, this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - 1.0 ) holds for: <this.minx, this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 / -1.0 ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = 0.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) iff (Double_Variable_1 > 0.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 <= 1.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 >= -1.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= 1.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < 0.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 >= 0.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 1.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 != -1.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) iff (Double_Variable_1 >= 1.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < 1.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 >= 1.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.maxy>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != -1.0) ) holds for: <this.minx, this.maxy>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != 0.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 > 0.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) xor (Double_Variable_1 >= 1.0) ) holds for: <this.minx, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + -1.0 ) holds for: <this.minx, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - 1.0 ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 <= 0.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 < 0.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= 0.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = -1.0) implies (Double_Variable_1 < 0.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = -1.0) implies (Double_Variable_1 <= -1.0) ) holds for: <this.maxx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 < -1.0) ) holds for: <this.maxx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 < 1.0) ) holds for: <this.maxx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.maxx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 = -1.0) ) holds for: <this.maxx, this.miny>
 FuzzedInvariant ( (Double_Variable_0 = 0.0) implies (Double_Variable_1 < 1.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 >= 0.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 < 0.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 1.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = -1.0) ) holds for: <this.maxx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.maxx, this.miny>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = 0.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = 1.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) or (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) or (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 % -1.0 ) holds for: <this.maxx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 < 1.0) ) holds for: <this.maxx, this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 % 1.0 ) holds for: <this.maxx, this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 ) holds for: <this.maxx, this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * -1.0 ) holds for: <this.maxx, this.miny>
@@ -107,56 +85,59 @@ FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - 0.0 ) holds for: <thi
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 / -1.0 ) holds for: <this.maxx, this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 / 1.0 ) holds for: <this.maxx, this.miny>
 daikon.Quant.fuzzy.ne(this.maxx, this.miny)
-FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 != -1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 >= -1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = -1.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 != 0.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 > -1.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 > 0.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.maxx, this.maxy>
 FuzzedInvariant ( (Double_Variable_0 = 0.0) implies (Double_Variable_1 < 1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 >= 0.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) or (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) or (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) or (Double_Variable_1 != 0.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) or (Double_Variable_1 >= 1.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 >= 1.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != -1.0) ) holds for: <this.maxx, this.maxy>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != 0.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 % -1.0 ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 > 0.0) ) holds for: <this.maxx, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 % 1.0 ) holds for: <this.maxx, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * -1.0 ) holds for: <this.maxx, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * 0.0 ) holds for: <this.maxx, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + -1.0 ) holds for: <this.maxx, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - 1.0 ) holds for: <this.maxx, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 / -1.0 ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 < 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 <= 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 <= 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 = -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != 0.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < 1.0) ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 > -1.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= 1.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 >= 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 < 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 1.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 != 0.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 > 0.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 > 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = 1.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 != -1.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 < -1.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 = 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 > -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 >= 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 > -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 <= -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > 0.0) ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * -1.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * 1.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + 0.0 ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + 1.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - -1.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - 0.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 / -1.0 ) holds for: <this.miny, this.maxy>
@@ -165,142 +146,138 @@ FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 ) holds for: <this.miny,
 FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 * 1.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 + 0.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 + 1.0 ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 - -1.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 - 0.0 ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 / 1.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 * 1.0 ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 + 0.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 + 1.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 - -1.0 ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 - 0.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 / 1.0 ) holds for: <this.miny, this.maxy>
 daikon.Quant.fuzzy.lt(this.miny, this.maxy)
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( (Double_Variable_0 <= 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) iff (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 = -1.0) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 = 0.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) xor (Double_Variable_1 = Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) xor (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) iff (Double_Variable_1 = Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + Double_Variable_2 ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - Double_Variable_2 ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 = Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = 0.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) xor (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 <= 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = 0.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) xor (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) xor (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > -1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > 1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + Double_Variable_2 ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) iff (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) iff (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) iff (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) xor (Double_Variable_1 = Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) xor (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 <= 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = 0.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) iff (Double_Variable_1 = Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) iff (Double_Variable_1 > Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) xor (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) xor (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > -1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) xor (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > 1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * Double_Variable_2 ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + Double_Variable_2 ) holds for: <this.maxx , this.miny , this.maxy>
@@ -323,134 +300,121 @@ FuzzedInvariant ( Double_Variable_0 > 1.0 ) holds for: return
 FuzzedInvariant ( Double_Variable_0 >= -1.0 ) holds for: return
 FuzzedInvariant ( Double_Variable_0 >= 0.0 ) holds for: return
 FuzzedInvariant ( Double_Variable_0 >= 1.0 ) holds for: return
-FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = 0.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.minx, this.maxx>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 > -1.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 = -1.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < 0.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.maxx>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > -1.0) ) holds for: <this.minx, this.maxx>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != 0.0) ) holds for: <this.minx, this.maxx>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = 0.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 <= 1.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= 1.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < 0.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 >= 0.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.minx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < 1.0) ) holds for: <this.minx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.minx, this.miny>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = 0.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 != -1.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.minx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.minx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.miny>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.minx, this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * -1.0 ) holds for: <this.minx, this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + -1.0 ) holds for: <this.minx, this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - 1.0 ) holds for: <this.minx, this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 / -1.0 ) holds for: <this.minx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = 0.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) iff (Double_Variable_1 > 0.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 <= 1.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 >= -1.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= 1.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < 0.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 >= 0.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 1.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 != -1.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) iff (Double_Variable_1 >= 1.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < 1.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 >= 1.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.maxy>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != -1.0) ) holds for: <this.minx, this.maxy>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != 0.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 > 0.0) ) holds for: <this.minx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) xor (Double_Variable_1 >= 1.0) ) holds for: <this.minx, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + -1.0 ) holds for: <this.minx, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - 1.0 ) holds for: <this.minx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) iff (Double_Variable_1 != 0.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = 0.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) xor (Double_Variable_1 < -1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) iff (Double_Variable_1 != 0.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 > 0.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 < 0.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= 0.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) implies (Double_Variable_1 > 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 != 0.0) implies (Double_Variable_1 > 0.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) iff (Double_Variable_1 >= 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) implies (Double_Variable_1 > 0.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) iff (Double_Variable_1 >= 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 > -1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 > 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 = -1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) xor (Double_Variable_1 < 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) xor (Double_Variable_1 = 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != 0.0) ) holds for: <this.minx, return>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 > -1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 != 0.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 > 0.0) ) holds for: <this.minx, return>
 FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 <= 1.0) implies (Double_Variable_1 > 0.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 != -1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 > 1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 >= -1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 = -1.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) iff (Double_Variable_1 < 1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < 0.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 >= 0.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) xor (Double_Variable_1 != 0.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) iff (Double_Variable_1 <= -1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) iff (Double_Variable_1 <= 1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 < 0.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = -1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 <= 1.0) implies (Double_Variable_1 != -1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 != 0.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 > -1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 > 0.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 > 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= -1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 = 0.0) or (Double_Variable_1 != -1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 = 0.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) or (Double_Variable_1 != -1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) xor (Double_Variable_1 != 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) xor (Double_Variable_1 > 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) iff (Double_Variable_1 = 0.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.minx, return>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = 0.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = 1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 > 1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 >= 1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) xor (Double_Variable_1 != -1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) xor (Double_Variable_1 >= 1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 != -1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) or (Double_Variable_1 != -1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) or (Double_Variable_1 != 1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) or (Double_Variable_1 != 1.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.minx, return>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 != 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 > -1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) xor (Double_Variable_1 > 0.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 > -1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) or (Double_Variable_1 != 0.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != -1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 >= 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) or (Double_Variable_1 >= 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 >= 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 > -1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 != -1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > -1.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > 0.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != -1.0) ) holds for: <this.minx, return>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != 0.0) ) holds for: <this.minx, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 > 0.0) ) holds for: <this.minx, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 ) holds for: <this.minx, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * -1.0 ) holds for: <this.minx, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * 1.0 ) holds for: <this.minx, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + -1.0 ) holds for: <this.minx, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + 0.0 ) holds for: <this.minx, return>
+FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + 1.0 ) holds for: <this.minx, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - -1.0 ) holds for: <this.minx, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - 0.0 ) holds for: <this.minx, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - 1.0 ) holds for: <this.minx, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 / -1.0 ) holds for: <this.minx, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 / 1.0 ) holds for: <this.minx, return>
 FuzzedInvariant ( Double_Variable_0 > Double_Variable_1 * -1.0 ) holds for: <this.minx, return>
-FuzzedInvariant ( Double_Variable_0 > Double_Variable_1 / -1.0 ) holds for: <this.minx, return>
 FuzzedInvariant ( Double_Variable_0 >= Double_Variable_1 * -1.0 ) holds for: <this.minx, return>
 FuzzedInvariant ( Double_Variable_0 >= Double_Variable_1 / -1.0 ) holds for: <this.minx, return>
 daikon.Quant.fuzzy.ne(this.minx, \result)
-FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 <= 0.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 < 0.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= 0.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = -1.0) implies (Double_Variable_1 < 0.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = -1.0) implies (Double_Variable_1 <= -1.0) ) holds for: <this.maxx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 < -1.0) ) holds for: <this.maxx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 < 1.0) ) holds for: <this.maxx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.maxx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 = -1.0) ) holds for: <this.maxx, this.miny>
 FuzzedInvariant ( (Double_Variable_0 = 0.0) implies (Double_Variable_1 < 1.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 >= 0.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 < 0.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 1.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = -1.0) ) holds for: <this.maxx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.maxx, this.miny>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = 0.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = 1.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) or (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) or (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.miny>
-FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 % -1.0 ) holds for: <this.maxx, this.miny>
+FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 < 1.0) ) holds for: <this.maxx, this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 % 1.0 ) holds for: <this.maxx, this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 ) holds for: <this.maxx, this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * -1.0 ) holds for: <this.maxx, this.miny>
@@ -461,93 +425,111 @@ FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - 0.0 ) holds for: <thi
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 / -1.0 ) holds for: <this.maxx, this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 / 1.0 ) holds for: <this.maxx, this.miny>
 daikon.Quant.fuzzy.ne(this.maxx, this.miny)
-FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 != -1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 >= -1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = -1.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 != 0.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 > -1.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 > 0.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.maxx, this.maxy>
 FuzzedInvariant ( (Double_Variable_0 = 0.0) implies (Double_Variable_1 < 1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 >= 0.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) or (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) or (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) or (Double_Variable_1 != 0.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) or (Double_Variable_1 >= 1.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 >= 1.0) ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != -1.0) ) holds for: <this.maxx, this.maxy>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != 0.0) ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 % -1.0 ) holds for: <this.maxx, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 > 0.0) ) holds for: <this.maxx, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 % 1.0 ) holds for: <this.maxx, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * -1.0 ) holds for: <this.maxx, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * 0.0 ) holds for: <this.maxx, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + -1.0 ) holds for: <this.maxx, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - 1.0 ) holds for: <this.maxx, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 / -1.0 ) holds for: <this.maxx, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 > 0.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 != 0.0) implies (Double_Variable_1 > 0.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) implies (Double_Variable_1 > 0.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 > -1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != 0.0) ) holds for: <this.maxx, return>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 > -1.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 != 0.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 > 0.0) ) holds for: <this.maxx, return>
 FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 <= 1.0) implies (Double_Variable_1 > 0.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 != -1.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 >= -1.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 = -1.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 >= 0.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 > 1.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 >= 1.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 != -1.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) or (Double_Variable_1 != -1.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) or (Double_Variable_1 != 1.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) or (Double_Variable_1 != 1.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 <= 1.0) implies (Double_Variable_1 != -1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 != 0.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 > -1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 > 0.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 > 1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= -1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= 1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 = 0.0) or (Double_Variable_1 != -1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 = 0.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) or (Double_Variable_1 != -1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 != 1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 > -1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 > -1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) or (Double_Variable_1 != 0.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != -1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 >= 1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) or (Double_Variable_1 >= 1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 >= 1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 > -1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 != -1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > -1.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > 0.0) ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != -1.0) ) holds for: <this.maxx, return>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != 0.0) ) holds for: <this.maxx, return>
-FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 % -1.0 ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 > 0.0) ) holds for: <this.maxx, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 % 1.0 ) holds for: <this.maxx, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * -1.0 ) holds for: <this.maxx, return>
+FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + 1.0 ) holds for: <this.maxx, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - -1.0 ) holds for: <this.maxx, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 / -1.0 ) holds for: <this.maxx, return>
 FuzzedInvariant ( Double_Variable_0 > Double_Variable_1 * -1.0 ) holds for: <this.maxx, return>
-FuzzedInvariant ( Double_Variable_0 > Double_Variable_1 / -1.0 ) holds for: <this.maxx, return>
 FuzzedInvariant ( Double_Variable_0 >= Double_Variable_1 * -1.0 ) holds for: <this.maxx, return>
 FuzzedInvariant ( Double_Variable_0 >= Double_Variable_1 / -1.0 ) holds for: <this.maxx, return>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 < 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 <= 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 <= 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 = -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != 0.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < 1.0) ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 > -1.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= 1.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 >= 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 < 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 1.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 != 0.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 > 0.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 > 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = 1.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 != -1.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 < -1.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 = 0.0) ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 > -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 >= 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 > -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 <= -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > -1.0) ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > 0.0) ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * -1.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * 1.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + 0.0 ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + 1.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - -1.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - 0.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 / -1.0 ) holds for: <this.miny, this.maxy>
@@ -556,323 +538,362 @@ FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 ) holds for: <this.miny,
 FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 * 1.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 + 0.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 + 1.0 ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 - -1.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 - 0.0 ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 / 1.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 * 1.0 ) holds for: <this.miny, this.maxy>
+FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 + 0.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 + 1.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 - -1.0 ) holds for: <this.miny, this.maxy>
-FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 - 0.0 ) holds for: <this.miny, this.maxy>
 FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 / 1.0 ) holds for: <this.miny, this.maxy>
 daikon.Quant.fuzzy.lt(this.miny, this.maxy)
-FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 > 0.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) implies (Double_Variable_1 > 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 != 0.0) implies (Double_Variable_1 > 0.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) implies (Double_Variable_1 > 0.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 > -1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 > 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != 0.0) ) holds for: <this.miny, return>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 > -1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 != 0.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 > 0.0) ) holds for: <this.miny, return>
 FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 <= 1.0) implies (Double_Variable_1 > 0.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 <= 1.0) implies (Double_Variable_1 != -1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) iff (Double_Variable_1 != 1.0) ) holds for: <this.miny, return>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) iff (Double_Variable_1 > -1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) iff (Double_Variable_1 > 0.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) iff (Double_Variable_1 >= 0.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 != -1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 > 1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 >= -1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= 1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) xor (Double_Variable_1 = 0.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) xor (Double_Variable_1 = 1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 = -1.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 >= 0.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 > 1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 >= 1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 != -1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) or (Double_Variable_1 != -1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) or (Double_Variable_1 != 1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) or (Double_Variable_1 != 1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 < -1.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 = 0.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.miny, return>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) iff (Double_Variable_1 > 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 != 0.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 > -1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 > 0.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 > 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= -1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 = 0.0) or (Double_Variable_1 != -1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 = 0.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) or (Double_Variable_1 != -1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 != 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 > -1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 > -1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) or (Double_Variable_1 != 0.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) iff (Double_Variable_1 < -1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) iff (Double_Variable_1 < 0.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) iff (Double_Variable_1 <= 0.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) iff (Double_Variable_1 <= 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != -1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 >= 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) or (Double_Variable_1 >= 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 >= 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 > -1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 != -1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > -1.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > 0.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != -1.0) ) holds for: <this.miny, return>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != 0.0) ) holds for: <this.miny, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 > 0.0) ) holds for: <this.miny, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + -1.0 ) holds for: <this.miny, return>
+FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + 1.0 ) holds for: <this.miny, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - -1.0 ) holds for: <this.miny, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - 1.0 ) holds for: <this.miny, return>
 FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 + 1.0 ) holds for: <this.miny, return>
+FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 - -1.0 ) holds for: <this.miny, return>
 FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 ) holds for: <this.miny, return>
-FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 * 1.0 ) holds for: <this.miny, return>
+FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 + 0.0 ) holds for: <this.miny, return>
 FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 + 1.0 ) holds for: <this.miny, return>
 FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 - -1.0 ) holds for: <this.miny, return>
-FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 - 0.0 ) holds for: <this.miny, return>
 FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 / 1.0 ) holds for: <this.miny, return>
 daikon.Quant.fuzzy.lte(this.miny, \result)
-FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 > 0.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 != 0.0) implies (Double_Variable_1 > 0.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) implies (Double_Variable_1 > 0.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 > -1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != 0.0) ) holds for: <this.maxy, return>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 > -1.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 != 0.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 > 0.0) ) holds for: <this.maxy, return>
 FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 <= 1.0) implies (Double_Variable_1 > 0.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 != -1.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 >= -1.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 = -1.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 >= 0.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 > 1.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 >= 1.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 != -1.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) or (Double_Variable_1 != -1.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) or (Double_Variable_1 != 1.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 >= -1.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) or (Double_Variable_1 != 1.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 >= 0.0) ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 <= 1.0) implies (Double_Variable_1 != -1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 != 0.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 > -1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 > 0.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 > 1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= -1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= 1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 = 0.0) or (Double_Variable_1 != -1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 = 0.0) or (Double_Variable_1 >= -1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) or (Double_Variable_1 != -1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= 0.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 != 1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 > -1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 > -1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 > 0.0) or (Double_Variable_1 != 0.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != -1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 >= 1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) or (Double_Variable_1 >= 1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 >= 1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 > -1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 > 1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 != -1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != 1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > -1.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > 0.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != -1.0) ) holds for: <this.maxy, return>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != 0.0) ) holds for: <this.maxy, return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 > 0.0) ) holds for: <this.maxy, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * -1.0 ) holds for: <this.maxy, return>
+FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + 1.0 ) holds for: <this.maxy, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - -1.0 ) holds for: <this.maxy, return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 / -1.0 ) holds for: <this.maxy, return>
 FuzzedInvariant ( Double_Variable_0 > Double_Variable_1 * -1.0 ) holds for: <this.maxy, return>
-FuzzedInvariant ( Double_Variable_0 > Double_Variable_1 / -1.0 ) holds for: <this.maxy, return>
 FuzzedInvariant ( Double_Variable_0 >= Double_Variable_1 * -1.0 ) holds for: <this.maxy, return>
 FuzzedInvariant ( Double_Variable_0 >= Double_Variable_1 / -1.0 ) holds for: <this.maxy, return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( (Double_Variable_0 <= 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) iff (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 = -1.0) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 = 0.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) xor (Double_Variable_1 = Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) xor (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) iff (Double_Variable_1 = Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + Double_Variable_2 ) holds for: <this.minx , this.maxx , this.miny>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - Double_Variable_2 ) holds for: <this.minx , this.maxx , this.miny>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 = Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = 0.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
-FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 = Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
 FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( (Double_Variable_0 > -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( (Double_Variable_0 > 1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
 FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxx , return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + Double_Variable_2 ) holds for: <this.minx , this.maxx , return>
 FuzzedInvariant ( Double_Variable_0 < Double_Variable_1 + Double_Variable_2 ) holds for: <this.minx , this.maxx , return>
 FuzzedInvariant ( Double_Variable_0 <= Double_Variable_1 + Double_Variable_2 ) holds for: <this.minx , this.maxx , return>
 FuzzedInvariant ( Double_Variable_0 >= Double_Variable_1 - Double_Variable_2 ) holds for: <this.minx , this.maxx , return>
-FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) xor (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 <= 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = 0.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) xor (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) xor (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > -1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > 1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + Double_Variable_2 ) holds for: <this.minx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) xor (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.miny , return>
 FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , return>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 = 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
 FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 = 1.0) xor (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , return>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 > -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , return>
 FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 > 1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , return>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 = 0.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
 FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + Double_Variable_2 ) holds for: <this.minx , this.maxy , return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - Double_Variable_2 ) holds for: <this.minx , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) iff (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) iff (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) iff (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) xor (Double_Variable_1 = Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) xor (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 <= 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = 0.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) iff (Double_Variable_1 = Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) iff (Double_Variable_1 > Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) xor (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) xor (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > -1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) xor (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > 1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * Double_Variable_2 ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + Double_Variable_2 ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - Double_Variable_2 ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( Double_Variable_0 > Double_Variable_1 - Double_Variable_2 ) holds for: <this.maxx , this.miny , this.maxy>
 FuzzedInvariant ( Double_Variable_0 >= Double_Variable_1 - Double_Variable_2 ) holds for: <this.maxx , this.miny , this.maxy>
-FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) iff (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
 FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
 FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
 FuzzedInvariant ( (Double_Variable_0 <= 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 = 0.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 = 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
 FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) iff (Double_Variable_1 > Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) xor (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 > -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
 FuzzedInvariant ( (Double_Variable_0 > 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 >= 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 > 1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 % Double_Variable_2 ) holds for: <this.maxx , this.miny , return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * Double_Variable_2 ) holds for: <this.maxx , this.miny , return>
@@ -880,46 +901,52 @@ FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - Double_Variable_2 ) h
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 / Double_Variable_2 ) holds for: <this.maxx , this.miny , return>
 FuzzedInvariant ( Double_Variable_0 > Double_Variable_1 - Double_Variable_2 ) holds for: <this.maxx , this.miny , return>
 FuzzedInvariant ( Double_Variable_0 >= Double_Variable_1 - Double_Variable_2 ) holds for: <this.maxx , this.miny , return>
-FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 = 0.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
 FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * Double_Variable_2 ) holds for: <this.maxx , this.maxy , return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - Double_Variable_2 ) holds for: <this.maxx , this.maxy , return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 / Double_Variable_2 ) holds for: <this.maxx , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 != 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
 FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 < -1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 = Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
 FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 <= -1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 <= 0.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
 FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 = Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
 FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
 FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 > 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 > -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 > 1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
 FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
-FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 >= 0.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 >= 1.0) or (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 < Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 = Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
 FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * Double_Variable_2 ) holds for: <this.miny , this.maxy , return>
 FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + Double_Variable_2 ) holds for: <this.miny , this.maxy , return>
