@@ -1,22 +1,26 @@
-buckets=16
-specs=16
+buckets=20
+specs=20
 =====================================
 :::OBJECT
-this.right != null
-FuzzedInvariant ( no n : DoublyLinkedListNode.*(left + right) : (n.left.*(left + right)) & (n.right.*(left + right)) in empty ) holds for: this
-FuzzedInvariant ( some n : DoublyLinkedListNode.*(left + right) : n = n.right.left ) holds for: this
 this.left != null
+this.left == this.left.left
+this.left.left.right == this.right
 =====================================
 :::POSTCONDITION
-n.right != null
-this.left == this.left.left.right
-this.right == \old(n)
-n.right == \old(this.right)
-this.right == this.right.left.right
-this.left.right.right == this.right
-n.right == \old(this.left.right.right)
-FuzzedInvariant ( no n : DoublyLinkedListNode.^(left + right) : n = n.right ) holds for: orig(this)
-this.right == n.left.right
+n.left == \old(this.right.right.right)
+n.left == n.right
 this.left == this.right
-n.left == \old(this.left.right)
-this.right == n.right.left
+this.left == this.right.right.right
+this.left == this.left.right
+this.left == this.right.left
+this.right.left == n.left
+this.left == this.left.right.left
+this.left.right == n.left
+this.right.right == n.left
+this.left == this.right.right
+this.left == this.left.left.right
+this.left == n.right.left
+this.left == this.left.right.right
+this.left == n.left.right
+this.left == n.right.right
+this.left == this.right.left.right

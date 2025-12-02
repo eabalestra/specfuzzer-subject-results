@@ -1,8 +1,7 @@
-buckets=2
-specs=2
+buckets=1
+specs=1
 =====================================
 :::OBJECT
 =====================================
 :::POSTCONDITION
-FuzzedInvariant ( Integer_Variable_0 != -1 ) holds for: return
-this.var62 == \result
+\result == \old(this.var62)

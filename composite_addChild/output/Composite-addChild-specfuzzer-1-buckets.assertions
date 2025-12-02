@@ -1,25 +1,7 @@
-buckets=12
-specs=19
+buckets=1
+specs=1
 =====================================
 :::OBJECT
-this.ancestors != null
-this.children != null
-daikon.Quant.size(this.max_child.parent.children) == 1 || daikon.Quant.size(this.max_child.parent.children) == 2 || daikon.Quant.size(this.max_child.parent.children) == 3
-daikon.Quant.size(this.parent.parent.children) == 1
-daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.parent.parent.children), new String[] { "examples.Composite" }) || daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.parent.parent.children), new String[] { "examples.Composite", "examples.Composite" })
+this.value == this.init_value
 =====================================
 :::POSTCONDITION
-FuzzedInvariant ( some n : Composite.children : n.children != n.parent.children ) holds for: orig(this)
-FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <this.parent.value , this.parent.init_value , this.init_value>
-FuzzedInvariant ( (Integer_Variable_0 < -1) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <this.parent.value , orig(this.parent.value) , c.value>
-FuzzedInvariant ( (Integer_Variable_0 = 0) or (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.value , this.init_value , orig(this.value)>
-this.parent.value >= this.value
-daikon.Quant.size(this.children) == 1 || daikon.Quant.size(this.children) == 2 || daikon.Quant.size(this.children) == 3
-c.parent != null
-daikon.Quant.size(c.parent.children) == 1 || daikon.Quant.size(c.parent.children) == 2 || daikon.Quant.size(c.parent.children) == 3
-daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.parent.children), new String[] { "examples.Composite" }) || daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.parent.children), new String[] { "examples.Composite", "examples.Composite" })
-daikon.Quant.size(this.max_child.parent.children)-1 == \old(daikon.Quant.size(this.max_child.parent.children))
-FuzzedInvariant ( (Integer_Variable_0 < 0) implies (Integer_Variable_1 < 0) ) holds for: <this.parent.value, this.init_value>
-c.value == c.init_value
-this.parent.value >= this.init_value
-daikon.Quant.size(this.children)-1 == \old(daikon.Quant.size(this.children))

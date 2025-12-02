@@ -1,7 +1,8 @@
 buckets=2
-specs=2
+specs=3
 =====================================
 :::OBJECT
+daikon.Quant.size(this._var50) == 1
 =====================================
 :::POSTCONDITION
 this._var50 != null

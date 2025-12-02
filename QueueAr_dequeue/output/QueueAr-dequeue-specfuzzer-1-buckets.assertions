@@ -1,26 +1,10 @@
-buckets=17
-specs=20
+buckets=5
+specs=4
 =====================================
 :::OBJECT
-this.front <= daikon.Quant.size(this.theArray)
-FuzzedInvariant ( Integer_Variable_0 >= 0 ) holds for: this.front
-this.back <= daikon.Quant.size(this.theArray)-1
-this.front == 0 || this.front == 1 || this.front == 2
-this.currentSize <= daikon.Quant.size(this.theArray)
+this.currentSize == 0
+this.front == 0
+this.theArray != null
+this.back == 0
 =====================================
 :::POSTCONDITION
-FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) or (Integer_Variable_1 = 1) ) holds for: <this.currentSize, this.front>
-FuzzedInvariant ( (Integer_Variable_0 <= 0) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <this.back , orig(this.currentSize) , orig(this.front)>
-FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 + Integer_Variable_2 ) holds for: <this.currentSize , this.back , this.front>
-FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.currentSize , this.back , this.front>
-\old(this.front) <= daikon.Quant.size(this.theArray)
-FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 + Integer_Variable_2 ) holds for: <this.currentSize , orig(this.currentSize) , orig(this.front)>
-this.front <= daikon.Quant.size(this.theArray)-1
-FuzzedInvariant ( some n : QueueAr.theArray : n = null ) holds for: orig(this)
-FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.currentSize , this.front , orig(this.currentSize)>
-FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <this.currentSize , this.back , orig(this.currentSize)>
-FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - -1 ) holds for: <this.back, orig(this.currentSize)>
-FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 - -1 ) holds for: <this.currentSize, this.front>
-this.currentSize == 0
-FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 + -1 ) holds for: <this.back, this.front>
-\old(this.currentSize) <= daikon.Quant.size(this.theArray)

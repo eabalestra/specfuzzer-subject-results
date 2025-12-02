@@ -1,10 +1,7 @@
-buckets=5
-specs=4
+buckets=1
+specs=1
 =====================================
 :::OBJECT
-this._var4384._0 == this._var5992
+_0 != null
 =====================================
 :::POSTCONDITION
-this._var721 != null
-FuzzedInvariant ( all n : MaxBag._var66253 : n <= Integer_Variable_0 ) holds for: <orig(this), this._var587>
-this._var1457 != null
