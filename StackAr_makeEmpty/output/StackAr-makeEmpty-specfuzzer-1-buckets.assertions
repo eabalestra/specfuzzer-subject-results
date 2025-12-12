@@ -1,9 +1,0 @@
-buckets=3
-specs=3
-=====================================
-:::OBJECT
-this.topOfStack == 0
-this.topOfStack == -1
-this.theArray != null
-=====================================
-:::POSTCONDITION

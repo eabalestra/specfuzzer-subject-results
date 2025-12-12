@@ -1,8 +1,0 @@
-===========================================================================
-examples.SimpleMethods:::OBJECT
-===========================================================================
-examples.SimpleMethods.addElementToSet(java.util.HashSet, int):::ENTER
-this != null
-element == 0 || element == 9
-===========================================================================
-examples.SimpleMethods.addElementToSet(java.util.HashSet, int):::EXIT

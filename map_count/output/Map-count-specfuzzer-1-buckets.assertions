@@ -1,8 +1,0 @@
-buckets=2
-specs=2
-=====================================
-:::OBJECT
-=====================================
-:::POSTCONDITION
-this.keys != null
-this.data != null

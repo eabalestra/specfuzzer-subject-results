@@ -1,7 +1,0 @@
-buckets=1
-specs=1
-=====================================
-:::OBJECT
-=====================================
-:::POSTCONDITION
-daikon.Quant.fuzzy.eq(\result, -4.0) || daikon.Quant.fuzzy.eq(\result, 0.0) || daikon.Quant.fuzzy.eq(\result, 4.0)

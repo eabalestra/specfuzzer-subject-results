@@ -1,9 +1,0 @@
-buckets=2
-specs=3
-=====================================
-:::OBJECT
-this.theArray != null
-daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.theArray), new String[] { null, null, null, null, null, null, null, null, null, null }) || daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.theArray), new String[] { "java.lang.Long", null, null, null, null, null, null, null, null, null })
-this.topOfStack == -1
-=====================================
-:::POSTCONDITION

@@ -1,9 +1,0 @@
-buckets=3
-specs=3
-=====================================
-:::OBJECT
-=====================================
-:::POSTCONDITION
-\result == \old(this._var4384._0)
-this._var1457 != null
-\result != null
