@@ -42,7 +42,7 @@ test_class_name=$class_name'Tester'
 echo 'test class: '$test_class_name
 echo ''
 echo "Executing Randoop"
-java -cp lib/randoop-all-4.2.4.jar:$subject_cp randoop.main.Main gentests $classes_flags --output-limit=5 --literals-level=ALL --literals-file=$SPECFUZZER/literals/lits.txt --omitmethods=$omitmethods --only-test-public-members=true --usethreads=false --junit-package-name='testers' --junit-output-dir=$outdir_tests --junit-reflection-allowed=false --regression-test-basename=$test_class_name --no-regression-assertions=true --randomseed=0 --checked-exception=INVALID --unchecked-exception=INVALID
+java -cp lib/randoop-all-4.2.4.jar:$subject_cp randoop.main.Main gentests $classes_flags --output-limit=50 --literals-level=ALL --literals-file=$SPECFUZZER/literals/lits.txt --omitmethods=$omitmethods --only-test-public-members=true --usethreads=false --junit-package-name='testers' --junit-output-dir=$outdir_tests --junit-reflection-allowed=false --regression-test-basename=$test_class_name --no-regression-assertions=true --randomseed=0 --checked-exception=INVALID --unchecked-exception=INVALID
 echo "Finished!"
 echo ''
 
