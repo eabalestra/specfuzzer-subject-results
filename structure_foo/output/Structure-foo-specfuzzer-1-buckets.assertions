@@ -1,0 +1,11 @@
+buckets=5
+specs=5
+=====================================
+:::OBJECT
+FuzzedInvariant ( Integer_Variable_0 != -1 ) holds for: this.var62
+=====================================
+:::POSTCONDITION
+FuzzedInvariant ( Integer_Variable_0 >= 1 ) holds for: return
+FuzzedInvariant ( Integer_Variable_0 != -1 ) holds for: return
+\result == \old(this.var62)
+FuzzedInvariant ( Integer_Variable_0 != 0 ) holds for: return

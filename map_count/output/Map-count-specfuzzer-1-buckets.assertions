@@ -1,0 +1,11 @@
+buckets=4
+specs=5
+=====================================
+:::OBJECT
+this.data != null
+this.keys != null
+=====================================
+:::POSTCONDITION
+FuzzedInvariant ( Integer_Variable_0 >= #(Map.data) ) holds for: <orig(this), return>
+daikon.Quant.eltsNotEqual(this.data, null)
+daikon.Quant.eltsNotEqual(this.keys, null)

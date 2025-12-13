@@ -1,0 +1,13 @@
+buckets=7
+specs=7
+=====================================
+:::OBJECT
+FuzzedInvariant ( Integer_Variable_0 <= 1 ) holds for: this.topOfStack
+this.topOfStack <= daikon.Quant.size(this.theArray)-1
+this.theArray != null
+this.topOfStack == -1 || this.topOfStack == 0 || this.topOfStack == 1
+this.topOfStack == -1
+this.topOfStack == 0
+=====================================
+:::POSTCONDITION
+FuzzedInvariant ( Integer_Variable_0 <= #(StackAr.theArray) ) holds for: <orig(this), this.topOfStack>

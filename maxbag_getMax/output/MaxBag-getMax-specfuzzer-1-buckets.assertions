@@ -1,0 +1,13 @@
+buckets=7
+specs=7
+=====================================
+:::OBJECT
+daikon.Quant.eltsNotEqual(this._var66253, null)
+this._var4384._0 == this._var5992
+=====================================
+:::POSTCONDITION
+daikon.Quant.eltsEqual(this._var4384._1, \result)
+\result == \old(this._var587)
+this._var1457 != null
+this._var4384 != null
+\result != null

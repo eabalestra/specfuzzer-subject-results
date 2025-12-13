@@ -1,0 +1,12 @@
+===========================================================================
+jts.Angle:::OBJECT
+this != null
+===========================================================================
+jts.Angle.getTurn(double, double):::ENTER
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 != 1.0) ) holds for: <ang1, ang2>
+FuzzedInvariant ( (Double_Variable_0 = -1.0) implies (Double_Variable_1 != 1.0) ) holds for: <ang1, ang2>
+===========================================================================
+jts.Angle.getTurn(double, double):::EXIT
+\result == -1 || \result == 0 || \result == 1
+FuzzedInvariant ( Integer_Variable_0 <= 1 ) holds for: return
+FuzzedInvariant ( Integer_Variable_0 >= -1 ) holds for: return

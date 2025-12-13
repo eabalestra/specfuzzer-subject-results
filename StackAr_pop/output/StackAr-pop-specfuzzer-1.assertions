@@ -1,0 +1,25 @@
+===========================================================================
+DataStructures.StackAr:::OBJECT
+this.theArray != null
+this.theArray.getClass().getName() == java.lang.Object[].class.getName()
+this.topOfStack == -1 || this.topOfStack == 0 || this.topOfStack == 1
+FuzzedInvariant ( Integer_Variable_0 <= 1 ) holds for: this.topOfStack
+FuzzedInvariant ( Integer_Variable_0 >= -1 ) holds for: this.topOfStack
+FuzzedInvariant ( Integer_Variable_0 != #(StackAr.theArray) ) holds for: <this, DataStructures.StackAr.DEFAULT_CAPACITY>
+FuzzedInvariant ( Integer_Variable_0 > #(StackAr.theArray) ) holds for: <this, DataStructures.StackAr.DEFAULT_CAPACITY>
+FuzzedInvariant ( Integer_Variable_0 >= #(StackAr.theArray) ) holds for: <this, DataStructures.StackAr.DEFAULT_CAPACITY>
+this.topOfStack <= daikon.Quant.size(this.theArray)-1
+===========================================================================
+DataStructures.StackAr.pop():::ENTER
+this.topOfStack == 0 || this.topOfStack == 1
+daikon.Quant.size(this.theArray) == 10
+===========================================================================
+DataStructures.StackAr.pop():::EXIT
+this.theArray == \old(this.theArray)
+this.theArray.getClass().getName() == \old(this.theArray.getClass().getName())
+daikon.Quant.size(this.theArray) == \old(daikon.Quant.size(this.theArray))
+daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.theArray), new String[] { null, null, null, null, null, null, null, null, null, null }) || daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.theArray), new String[] { "java.lang.Integer", null, null, null, null, null, null, null, null, null })
+this.topOfStack == -1 || this.topOfStack == 0
+daikon.Quant.size(this.theArray) == 10
+daikon.Quant.getElement_Object(this.theArray, \old(this.topOfStack)) == null
+daikon.Quant.memberOf(daikon.Quant.getElement_Object(this.theArray, \old(this.topOfStack)) , \old(this.theArray) )

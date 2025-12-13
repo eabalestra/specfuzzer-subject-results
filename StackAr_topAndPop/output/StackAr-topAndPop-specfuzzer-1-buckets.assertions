@@ -1,0 +1,21 @@
+buckets=13
+specs=15
+=====================================
+:::OBJECT
+FuzzedInvariant ( Integer_Variable_0 <= 1 ) holds for: this.topOfStack
+this.theArray != null
+this.topOfStack == -1
+this.topOfStack == -1 || this.topOfStack == 0 || this.topOfStack == 1
+this.topOfStack <= daikon.Quant.size(this.theArray)-1
+=====================================
+:::POSTCONDITION
+daikon.Quant.eltsEqual(this.theArray, daikon.Quant.getElement_Object(this.theArray, \old(this.topOfStack)))
+daikon.Quant.eltsEqual(daikon.Quant.typeArray(this.theArray), null)
+\old(this.topOfStack) == 0
+FuzzedInvariant ( all n : StackAr.theArray : n = null ) holds for: orig(this)
+this.topOfStack < daikon.Quant.size(this.theArray)
+\old(this.topOfStack) < daikon.Quant.size(this.theArray)-1
+daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.theArray), new String[] { null, null, null, null }) || daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.theArray), new String[] { null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null })
+this.topOfStack < daikon.Quant.size(this.theArray)-1
+FuzzedInvariant ( Integer_Variable_0 != #(StackAr.theArray) ) holds for: <orig(this), this.topOfStack>
+this.topOfStack <= \old(this.topOfStack)

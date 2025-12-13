@@ -1,0 +1,23 @@
+===========================================================================
+org.apache.commons.math3.util.ArithmeticUtilsNew:::OBJECT
+===========================================================================
+org.apache.commons.math3.util.ArithmeticUtilsNew.subAndCheck(long, long):::ENTER
+FuzzedInvariant ( Long_Variable_0 != Long_Variable_1 ) holds for: <a, b>
+a != b
+===========================================================================
+org.apache.commons.math3.util.ArithmeticUtilsNew.subAndCheck(long, long):::EXIT
+FuzzedInvariant ( Long_Variable_0 != Long_Variable_1 ) holds for: <orig(b), return>
+\result != \old(b)
+FuzzedInvariant ( (Long_Variable_0 != Long_Variable_1) implies (Long_Variable_1 != Long_Variable_2) ) holds for: <orig(a) , orig(b) , return>
+FuzzedInvariant ( (Long_Variable_0 != Long_Variable_1) or (Long_Variable_1 <= Long_Variable_2) ) holds for: <orig(a) , orig(b) , return>
+FuzzedInvariant ( (Long_Variable_0 = Long_Variable_1) iff (Long_Variable_1 = Long_Variable_2) ) holds for: <orig(a) , orig(b) , return>
+FuzzedInvariant ( (Long_Variable_0 = Long_Variable_1) implies (Long_Variable_1 <= Long_Variable_2) ) holds for: <orig(a) , orig(b) , return>
+FuzzedInvariant ( (Long_Variable_0 = Long_Variable_1) implies (Long_Variable_1 >= Long_Variable_2) ) holds for: <orig(a) , orig(b) , return>
+FuzzedInvariant ( (Long_Variable_0 = Long_Variable_1) xor (Long_Variable_1 != Long_Variable_2) ) holds for: <orig(a) , orig(b) , return>
+FuzzedInvariant ( (Long_Variable_0 > Long_Variable_1) implies (Long_Variable_1 != Long_Variable_2) ) holds for: <orig(a) , orig(b) , return>
+FuzzedInvariant ( (Long_Variable_0 > Long_Variable_1) or (Long_Variable_1 != Long_Variable_2) ) holds for: <orig(a) , orig(b) , return>
+FuzzedInvariant ( (Long_Variable_0 >= Long_Variable_1) or (Long_Variable_1 != Long_Variable_2) ) holds for: <orig(a) , orig(b) , return>
+FuzzedInvariant ( Long_Variable_0 != Long_Variable_1 * Long_Variable_2 ) holds for: <orig(a) , orig(b) , return>
+FuzzedInvariant ( Long_Variable_0 != Long_Variable_1 - Long_Variable_2 ) holds for: <orig(a) , orig(b) , return>
+FuzzedInvariant ( Long_Variable_0 <= Long_Variable_1 + Long_Variable_2 ) holds for: <orig(a) , orig(b) , return>
+\result - \old(a) + \old(b) == 0

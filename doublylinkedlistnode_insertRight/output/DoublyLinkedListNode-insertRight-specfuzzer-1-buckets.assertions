@@ -1,0 +1,22 @@
+buckets=16
+specs=16
+=====================================
+:::OBJECT
+FuzzedInvariant ( no n : DoublyLinkedListNode.^(left + right) : (n.left.*(left + right)) & (n.right.*(left + right)) in empty ) holds for: this
+this.left != null
+this.right != null
+=====================================
+:::POSTCONDITION
+this.right == \old(n.right.left)
+n.right == \old(this.left.right.right)
+this.right == n.right.left
+n.right != null
+FuzzedInvariant ( all n : DoublyLinkedListNode.^(left + right) : n != n.right ) holds for: orig(this)
+n.left == \old(this)
+this.left.right.right == this.right
+this.left == this.right.left.left
+this.right == this.right.left.right
+this.right == \old(n.left.right)
+this.left == this.right
+this.left == this.left.left.right
+n.right == \old(this.right)

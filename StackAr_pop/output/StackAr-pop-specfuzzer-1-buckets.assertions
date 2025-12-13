@@ -1,0 +1,11 @@
+buckets=4
+specs=5
+=====================================
+:::OBJECT
+this.topOfStack <= daikon.Quant.size(this.theArray)-1
+this.topOfStack == -1
+this.topOfStack == -1 || this.topOfStack == 0 || this.topOfStack == 1
+this.theArray != null
+=====================================
+:::POSTCONDITION
+daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.theArray), new String[] { null, null, null, null, null, null, null, null, null, null }) || daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.theArray), new String[] { "java.lang.Integer", null, null, null, null, null, null, null, null, null })

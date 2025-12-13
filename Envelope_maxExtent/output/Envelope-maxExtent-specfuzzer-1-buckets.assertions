@@ -1,0 +1,19 @@
+buckets=13
+specs=13
+=====================================
+:::OBJECT
+=====================================
+:::POSTCONDITION
+FuzzedInvariant ( (Double_Variable_0 = -1.0) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 != 0.0) xor (Double_Variable_1 = Double_Variable_2) ) holds for: <this.maxx , this.maxy , return>
+FuzzedInvariant ( Double_Variable_0 > Double_Variable_1 * Double_Variable_2 ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( Double_Variable_0 > Double_Variable_1 - Double_Variable_2 ) holds for: <this.minx , this.maxy , return>
+FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - 1.0 ) holds for: <this.maxx, return>
+FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) iff (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+FuzzedInvariant ( (Double_Variable_0 >= -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 < 1.0) implies (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.miny , this.maxy , return>
+FuzzedInvariant ( (Double_Variable_0 != -1.0) or (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.maxy , return>
+FuzzedInvariant ( Double_Variable_0 >= Double_Variable_1 - Double_Variable_2 ) holds for: <this.minx , this.maxx , return>
+FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 % Double_Variable_2 ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( Double_Variable_0 > Double_Variable_1 - Double_Variable_2 ) holds for: <this.minx , this.miny , return>
+FuzzedInvariant ( Double_Variable_0 >= Double_Variable_1 - Double_Variable_2 ) holds for: <this.miny , this.maxy , return>

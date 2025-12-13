@@ -1,0 +1,21 @@
+buckets=14
+specs=15
+=====================================
+:::OBJECT
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 % 1 ) holds for: <this.start, this.capacity_>
+FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) implies (Integer_Variable_1 > 0) ) holds for: <this.start, this.capacity_>
+FuzzedInvariant ( Integer_Variable_0 != -1 ) holds for: this.free
+daikon.Quant.size(this.data) == 1 || daikon.Quant.size(this.data) == 2 || daikon.Quant.size(this.data) == 3
+this.data != null
+FuzzedInvariant ( Integer_Variable_0 >= 1 ) holds for: this.free
+FuzzedInvariant ( (Integer_Variable_0 = -1) xor (Integer_Variable_1 > 0) ) holds for: <this.start, this.capacity_>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 % 1 ) holds for: <this.start, this.capacity_>
+FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) xor (Integer_Variable_1 <= 1) ) holds for: <this.start, this.capacity_>
+this.start == 1
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - 1 ) holds for: <this.start, this.capacity_>
+daikon.Quant.size(this.data) == 1
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / -1 ) holds for: <this.start, this.capacity_>
+=====================================
+:::POSTCONDITION
+daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.data), new String[] { null, "java.lang.String" }) || daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.data), new String[] { null, "java.lang.String", "java.lang.String" })
+daikon.Quant.size(this.data)-1 == \old(daikon.Quant.size(this.data))

@@ -1,0 +1,6 @@
+===========================================================================
+examples.MinFinder:::OBJECT
+FuzzedInvariant ( all n : MinFinder._var88 : n != null ) holds for: this
+FuzzedInvariant ( no n : MinFinder._var88 : n = null ) holds for: this
+daikon.Quant.eltsNotEqual(this._var88, null)
+daikon.Quant.eltsEqual(daikon.Quant.typeArray(this._var88), "examples.MinFinder.T")

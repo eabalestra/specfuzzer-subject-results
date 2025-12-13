@@ -1,0 +1,16 @@
+buckets=6
+specs=10
+=====================================
+:::OBJECT
+daikon.Quant.size(this.data) == 1
+this.keys != null
+daikon.Quant.size(this.keys) == 1
+this.data != null
+=====================================
+:::POSTCONDITION
+daikon.Quant.size(this.keys) == \old(daikon.Quant.size(this.keys))-1
+daikon.Quant.size(this.data) == \old(daikon.Quant.size(this.data))-1
+daikon.Quant.eltsNotEqual(this.keys, null)
+\result == 1
+("oneOf.java.jpp: SEQUENCE unimplemented" != null)
+daikon.Quant.eltsNotEqual(this.data, null)

@@ -1,0 +1,151 @@
+===========================================================================
+examples.SimpleMethods:::OBJECT
+===========================================================================
+examples.SimpleMethods.incrementNumberAtIndex(int[], int):::ENTER
+intArray != null
+daikon.Quant.size(intArray) == 0 || daikon.Quant.size(intArray) == 2 || daikon.Quant.size(intArray) == 4
+daikon.Quant.size(intArray)-1 != 0
+ind != daikon.Quant.size(intArray)-1
+===========================================================================
+examples.SimpleMethods.incrementNumberAtIndex(int[], int):::EXIT
+FuzzedInvariant ( Integer_Variable_0 != 0 ) holds for: size(intArray[])-1
+FuzzedInvariant ( Integer_Variable_0 >= -1 ) holds for: size(intArray[])-1
+daikon.Quant.size(intArray)-1 != 0
+FuzzedInvariant ( Integer_Variable_0 != -1 ) holds for: orig(size(intArray[]))
+FuzzedInvariant ( Integer_Variable_0 != 1 ) holds for: orig(size(intArray[]))
+FuzzedInvariant ( Integer_Variable_0 > -1 ) holds for: orig(size(intArray[]))
+FuzzedInvariant ( Integer_Variable_0 >= -1 ) holds for: orig(size(intArray[]))
+FuzzedInvariant ( Integer_Variable_0 >= 0 ) holds for: orig(size(intArray[]))
+daikon.Quant.lexGTE(intArray, \old(intArray))
+FuzzedInvariant ( (Integer_Variable_0 != -1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 != -1) or (Integer_Variable_1 != -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 != -1) or (Integer_Variable_1 > -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 != -1) or (Integer_Variable_1 >= -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 != 1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 != 1) or (Integer_Variable_1 != 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 != 1) or (Integer_Variable_1 >= 1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 != 1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 <= -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 <= 1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 = 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 = 1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 > -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 >= -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 < -1) implies (Integer_Variable_1 > 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 < 0) implies (Integer_Variable_1 != 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 < 0) implies (Integer_Variable_1 > -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 < 0) implies (Integer_Variable_1 >= 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 < 1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 > -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 >= 1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 <= -1) implies (Integer_Variable_1 != -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 <= -1) implies (Integer_Variable_1 > -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 <= 0) or (Integer_Variable_1 != 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 != -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 >= 1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 = -1) or (Integer_Variable_1 != 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 = 1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 = 1) or (Integer_Variable_1 >= -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) iff (Integer_Variable_1 < -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) iff (Integer_Variable_1 = 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 != -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 < -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 < 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 < 1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 <= -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 = -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 > -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 > -1) implies (Integer_Variable_1 != 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 > -1) or (Integer_Variable_1 != -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 > -1) or (Integer_Variable_1 != 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 > -1) or (Integer_Variable_1 > 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 > 0) implies (Integer_Variable_1 != 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) implies (Integer_Variable_1 != 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 >= 1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 >= 0) or (Integer_Variable_1 >= 1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) implies (Integer_Variable_1 != 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 > -1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 >= 0) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 >= 1) ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 * -1 ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 * 1 ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + -1 ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + 0 ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - 0 ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - 1 ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / -1 ) holds for: <orig(ind), size(intArray[])-1>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / 1 ) holds for: <orig(ind), size(intArray[])-1>
+\old(ind) != daikon.Quant.size(intArray)-1
+FuzzedInvariant ( (Integer_Variable_0 != -1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 != -1) or (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 != -1) or (Integer_Variable_1 > -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 != -1) or (Integer_Variable_1 >= -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 != 1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 != 1) or (Integer_Variable_1 != 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 != 1) or (Integer_Variable_1 >= 1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) implies (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) implies (Integer_Variable_1 > -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 != 1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 > -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 >= -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 < -1) implies (Integer_Variable_1 > 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 < 0) implies (Integer_Variable_1 != 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 < 0) implies (Integer_Variable_1 != 1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 < 0) implies (Integer_Variable_1 > -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 < 0) implies (Integer_Variable_1 >= 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 < 0) or (Integer_Variable_1 >= 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 < 1) implies (Integer_Variable_1 != 1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 < 1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 > -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 >= 1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 != 1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 > -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 <= -1) implies (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 <= -1) implies (Integer_Variable_1 > -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 <= -1) or (Integer_Variable_1 >= 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 <= 0) or (Integer_Variable_1 > -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 <= 1) implies (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 <= 1) implies (Integer_Variable_1 != 1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 <= 1) or (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 != 1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) or (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) or (Integer_Variable_1 > -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 = 1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 = 1) or (Integer_Variable_1 >= -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 > -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) or (Integer_Variable_1 != 1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) or (Integer_Variable_1 >= 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 > -1) implies (Integer_Variable_1 != 1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 > -1) or (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 > -1) or (Integer_Variable_1 != 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 > -1) or (Integer_Variable_1 > 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 > 0) or (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 > 1) implies (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 > 1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 != 1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 >= 0) or (Integer_Variable_1 >= 1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 >= 1) implies (Integer_Variable_1 != 1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 >= 1) or (Integer_Variable_1 != 1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) implies (Integer_Variable_1 > -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 > -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 >= 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 >= 1) ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + -1 ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + 1 ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - -1 ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - 1 ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 * -1 ) holds for: <orig(ind), orig(size(intArray[]))>
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 / -1 ) holds for: <orig(ind), orig(size(intArray[]))>

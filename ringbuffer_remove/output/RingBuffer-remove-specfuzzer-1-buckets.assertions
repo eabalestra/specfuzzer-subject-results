@@ -1,0 +1,19 @@
+buckets=12
+specs=13
+=====================================
+:::OBJECT
+this.start == 1
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - -1 ) holds for: <this.start, this.capacity_>
+daikon.Quant.size(this.data) == 1
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 * 0 ) holds for: <this.start, this.capacity_>
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 * 0 ) holds for: <this.start, this.capacity_>
+FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) xor (Integer_Variable_1 != 1) ) holds for: <this.start, this.capacity_>
+FuzzedInvariant ( Integer_Variable_0 >= 1 ) holds for: this.free
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / -1 ) holds for: <this.start, this.capacity_>
+FuzzedInvariant ( (Integer_Variable_0 = 1) iff (Integer_Variable_1 > 0) ) holds for: <this.start, this.capacity_>
+FuzzedInvariant ( (Integer_Variable_0 >= 0) iff (Integer_Variable_1 > 0) ) holds for: <this.start, this.capacity_>
+daikon.Quant.size(this.data) == 1 || daikon.Quant.size(this.data) == 2 || daikon.Quant.size(this.data) == 3
+FuzzedInvariant ( Integer_Variable_0 > -1 ) holds for: this.free
+this.data != null
+=====================================
+:::POSTCONDITION

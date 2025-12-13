@@ -1,0 +1,36 @@
+buckets=21
+specs=30
+=====================================
+:::OBJECT
+this.children != null
+daikon.Quant.size(this.parent.children) == 1
+("oneOf.java.jpp: SEQUENCE unimplemented" != null)
+this.max_child.children != null
+daikon.Quant.eltsNotEqual(this.max_child.parent.children, null)
+this.ancestors != null
+daikon.Quant.eltsNotEqual(this.children, null)
+daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.max_child.parent.children), new String[] { "examples.Composite" }) || daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.max_child.parent.children), new String[] { "examples.Composite", "examples.Composite" })
+this.value >= this.init_value
+daikon.Quant.size(this.parent.parent.children) == 1
+daikon.Quant.eltsNotEqual(this.parent.children, null)
+daikon.Quant.size(this.parent.max_child.children) == 1
+daikon.Quant.size(this.max_child.parent.children) == 1
+=====================================
+:::POSTCONDITION
+FuzzedInvariant ( some n : Composite.children : n.ancestors != n.parent.ancestors ) holds for: orig(this)
+FuzzedInvariant ( Integer_Variable_0 != #(Composite.ancestors.value) ) holds for: <orig(this), this.init_value>
+daikon.Quant.size(this.max_child.parent.children)-1 == \old(daikon.Quant.size(this.max_child.parent.children))
+daikon.Quant.size(this.parent.max_child.children)-1 == \old(daikon.Quant.size(this.parent.max_child.children))
+c.parent != null
+FuzzedInvariant ( Integer_Variable_0 in Composite.children.init_value ) holds for: <orig(this), this.max_child.value>
+FuzzedInvariant ( no n : Composite.children : n.init_value > Integer_Variable_0 ) holds for: <orig(this), this.value>
+FuzzedInvariant ( Integer_Variable_0 != 0 ) holds for: this.value
+FuzzedInvariant ( Integer_Variable_0 != #(Composite.ancestors.init_value) ) holds for: <orig(this), this.value>
+FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) xor (Integer_Variable_1 < -1) ) holds for: <this.value, c.value>
+daikon.Quant.size(this.children)-1 == \old(daikon.Quant.size(this.children))
+daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.children), new String[] { "examples.Composite" }) || daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(this.children), new String[] { "examples.Composite", "examples.Composite" })
+FuzzedInvariant ( Integer_Variable_0 != 0 ) holds for: this.init_value
+this.parent.value == this.value
+daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(c.parent.children), new String[] { "examples.Composite" }) || daikon.Quant.pairwiseEqual(daikon.Quant.typeArray(c.parent.children), new String[] { "examples.Composite", "examples.Composite" })
+FuzzedInvariant ( some n : Composite.children : n.value <= n.parent.value ) holds for: orig(this)
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) iff (Integer_Variable_1 < Integer_Variable_2) ) holds for: <this.value , this.init_value , c.value>
